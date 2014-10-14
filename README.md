@@ -10,7 +10,7 @@ You can clone this git, download the class
 include 'PHPToJS.php';
 ```
 
-Or use Composer :
+Or use Composer (via [packagist](https://packagist.org/packages/ropendev/phptojs)):
 ```json
 {
     "require": {
