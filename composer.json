@@ -1,0 +1,21 @@
+{
+    "name": "ropendev/phptojs",
+    "description": "PHPToJS's class convert php variable's content to js variable's content preserving javascript expression (like function)",
+    "keywords": ["php to js", "javascript", "json_encode"],
+    "homepage": "http://www.robin-d.fr/",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+     },
+     "authors": [
+        {
+            "name": "Robin",
+            "email": "contact@robin-d.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "rOpenDev\\PHPToJS\\": ""
+        }
+    }
+}
