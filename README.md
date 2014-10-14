@@ -35,7 +35,27 @@ $options = (object) array(
 );
 echo phpToJS::render($options);
 ```
+Will render :
+```
+{title: {label: "PHP To JS charts",class: "titlechart",formatter: function(s) { return s.replace("-", "/"); }},data: [2014,2013,2012,2011]}
+```
 
+You can use `renderReadable` function which would render :
+```
+{
+	title: {
+		label: "PHP To JS charts",
+		class: "titlechart",
+		formatter: function(s) { return s.replace("-", "/"); }
+	},
+	data: [
+		2014,
+		2013,
+		2012,
+		2011
+	]
+}
+```
 
 ## Licence
 MIT
