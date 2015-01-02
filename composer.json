@@ -9,13 +9,25 @@
      },
      "authors": [
         {
-            "name": "Robin",
-            "email": "contact@robin-d.fr"
+            "name": ":Robin",
+            "email": "contact@robin-d.fr",
+            "homepage": "http://www.robin-d.fr/",
+            "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "rOpenDev\\PHPToJS\\": ""
+            "rOpenDev\\PHPToJS\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "rOpenDev\\Cache\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
         }
     }
 }
