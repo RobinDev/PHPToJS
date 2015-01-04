@@ -1,5 +1,7 @@
 # PHPToJS
 
+[![Build Status](https://travis-ci.org/RobinDev/PHPToJS.svg)](https://travis-ci.org/RobinDev/PHPToJS)
+
 PHPToJS's class convert php variable's content to js variable's content preserving javascript expression (like function).
 
 This class is perfect if you were limited by php function `json_encode`, json's validity and/or `JSON.parse` when you have a javascript function.
