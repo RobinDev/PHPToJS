@@ -1,11 +1,14 @@
-# PHPToJS
+# Convert PHP Variable to Javascript Variable
 
+[![Quality Score](https://img.shields.io/scrutinizer/g/RobinDev/PHPToJS.svg?style=flat-square)](https://scrutinizer-ci.com/g/RobinDev/PHPToJS)
 [![Build Status](https://travis-ci.org/RobinDev/PHPToJS.svg)](https://travis-ci.org/RobinDev/PHPToJS)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2f4eb5f2-2c49-4dce-90f5-4d19a8d7c83b/mini.png)](https://insight.sensiolabs.com/projects/2f4eb5f2-2c49-4dce-90f5-4d19a8d7c83b)
 
 PHPToJS's class convert php variable's content to js variable's content preserving javascript expression (like function).
 
 This class is perfect if you were limited by php function `json_encode`, json's validity and/or `JSON.parse` when you have a javascript function.
+
+*To Know* : A php array with keys can't be a javascript array... so it will become a javascript object.
 
 ## Installation
 
