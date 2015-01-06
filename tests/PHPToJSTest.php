@@ -4,6 +4,10 @@ namespace rOpenDev\PHPToJS;
 class PHPToJSTest extends \PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @param mixed  $options
+     * @param string $optionsRendererdExpected
+     */
     private function render($options, $optionsRendererdExpected)
     {
         $optionsRendered = PHPToJS::render($options);
