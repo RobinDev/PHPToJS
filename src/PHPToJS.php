@@ -31,16 +31,19 @@ class PHPToJS
         $r = array();
         $i = 0;
         foreach ($mixed as $k => $m) {
-            if ($isObject) {
-                $r[$i] = $k.':'.self::render($m);
-            } elseif ($isNumArr) {
-                $r[$i] = self::render($m);
-            } else {
-                $r[$i] = json_encode($k).':'.self::render($m);
-            }
+            $r[$i] = ($isObject ? self::renderObjectKey($k).':' : '').self::render($m);
             ++$i;
         }
 
         return  ($isObject ? '{' : '[').implode(',', $r).($isObject ? '}' : ']');
+    }
+
+    /**
+     * @param string $str
+     * @return string
+     */
+    private static function renderObjectKey($str)
+    {
+        return strpos($str, ' ')!== false ? json_encode($str) : $str;
     }
 }
