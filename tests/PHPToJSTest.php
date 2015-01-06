@@ -3,21 +3,33 @@ namespace rOpenDev\PHPToJS;
 
 class PHPToJSTest extends \PHPUnit_Framework_TestCase
 {
+
+    private function render($options, $optionsRendererdExpected)
+    {
+        $optionsRendered = PHPToJS::render($options);
+        $this->assertTrue($optionsRendererdExpected == $optionsRendered);
+    }
+
     public function testRender()
     {
-        $options = (object) [
-            'title' => (object) [
-                'label' => 'PHP To JS charts',
-                'class' => 'titlechart',
-                'formatter' => 'function(s) { return s.replace("-", "/"); }',
+        $this->render(
+            (object) [
+                'title' => (object) [
+                    'label' => 'PHP To JS charts',
+                    'class' => 'titlechart',
+                    'formatter' => 'function(s) { return s.replace("-", "/"); }',
+                ],
+                'data' => array(2014,2013,2012,2011)
             ],
-            'data' => array(2014,2013,2012,2011)
-        ];
+            '{title:{label:"PHP To JS charts",class:"titlechart",formatter:function(s) { return s.replace("-", "/"); }},data:[2014,2013,2012,2011]}'
+        );
+    }
 
-        $optionsRendered = PHPToJS::render($options);
-
-        $optionsRendererdExpected = '{title:{label:"PHP To JS charts",class:"titlechart",formatter:function(s) { return s.replace("-", "/"); }},data:[2014,2013,2012,2011]}';
-
-        $this->assertTrue($optionsRendererdExpected == $optionsRendered);
+    /**
+     * Issue: an (empty?) array is converted in a object
+     */
+    public function testArrayRendering()
+    {
+        $this->render([], '[]');
     }
 }

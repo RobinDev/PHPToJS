@@ -26,7 +26,7 @@ class PHPToJS
         }
 
         $isNumArr = array_keys((array) $mixed) === range(0, count((array) $mixed) - 1);
-        $isObject = is_object($mixed) || !$isNumArr;
+        $isObject = is_object($mixed) || (!$isNumArr && !empty($mixed));
 
         $r = array();
         $i = 0;
