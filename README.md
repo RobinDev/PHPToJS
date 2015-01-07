@@ -3,6 +3,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/RobinDev/PHPToJS.svg?style=flat-square)](https://scrutinizer-ci.com/g/RobinDev/PHPToJS)
 [![Build Status](https://travis-ci.org/RobinDev/PHPToJS.svg)](https://travis-ci.org/RobinDev/PHPToJS)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2f4eb5f2-2c49-4dce-90f5-4d19a8d7c83b/mini.png)](https://insight.sensiolabs.com/projects/2f4eb5f2-2c49-4dce-90f5-4d19a8d7c83b)
+[![Total Downloads](https://img.shields.io/packagist/dt/ropendev/phptojs.svg?style=flat-square)](https://packagist.org/packages/ropendev/phptojs)
 
 PHPToJS's class convert php variable's content to js variable's content preserving javascript expression (like function).
 
